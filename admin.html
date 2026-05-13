@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>بوصلة الخريج - لوحة الإدارة</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>بوصلة الخريج - لوحة الإدارة</h1>
+        <nav>
+            <a href="index.html">العودة للرئيسية</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="loginSection" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+            <h2>تسجيل الدخول للمسؤول</h2>
+            <label for="adminUser">اسم المستخدم:</label>
+            <input type="text" id="adminUser"><br><br>
+            <label for="adminPass">كلمة المرور:</label>
+            <input type="password" id="adminPass"><br><br>
+            <button id="loginBtn">دخول</button>
+        </section>
+
+        <section id="dashboardSection" style="border: 1px solid #ccc; padding: 20px;">
+            <h2>إدارة المسارات المهنية</h2>
+
+            <div style="background-color: #f9f9f9; padding: 10px; margin-bottom: 20px; border: 1px dashed #999;">
+                <h3>+ إضافة مسار جديد</h3>
+                <label>المسمى الوظيفي:</label>
+                <input type="text" id="newJobTitle">
+                <label>مستوى الطلب:</label>
+                <select id="newJobDemand">
+                    <option value="عالٍ">عالٍ</option>
+                    <option value="متوسط">متوسط</option>
+                    <option value="منخفض">منخفض</option>
+                </select>
+                <button id="addJobBtn">إضافة المسار</button>
+            </div>
+
+            <table border="1" width="100%" style="text-align: center; border-collapse: collapse;">
+                <thead style="background-color: #eee;">
+                    <tr>
+                        <th>#</th>
+                        <th>المسمى الوظيفي</th>
+                        <th>مستوى الطلب</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="adminJobsList">
+                    <tr>
+                        <td>1</td>
+                        <td>محلل بيانات</td>
+                        <td>عالٍ</td>
+                        <td><button>حذف</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
